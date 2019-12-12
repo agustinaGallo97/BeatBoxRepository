@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.bignerdranch.android.beatbox.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+  companion object {
+    private const val SPAN_COUNT = 3
+  }
+
   private lateinit var beatBox: BeatBox
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
     binding.recyclerView.apply {
-      layoutManager = GridLayoutManager(context, 3)
+      layoutManager = GridLayoutManager(context, SPAN_COUNT)
       adapter = SoundAdapter(beatBox.sounds)
     }
   }

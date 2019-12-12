@@ -3,7 +3,6 @@ package com.bignerdranch.android.beatbox
 import android.content.res.AssetManager
 import com.bignerdranch.android.beatbox.models.Sound
 import timber.log.Timber
-import java.lang.Exception
 
 class BeatBox(private val assets: AssetManager) {
   companion object {
@@ -21,7 +20,7 @@ class BeatBox(private val assets: AssetManager) {
 
     try {
       soundNames = assets.list(SOUNDS_FOLDER)!!
-    } catch (e: Exception) {
+    } catch (e: ExceptionInInitializerError) {
       Timber.e(e, "Could not listen assets")
       return emptyList()
     }
