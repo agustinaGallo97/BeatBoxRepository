@@ -7,7 +7,6 @@ import com.bignerdranch.android.beatbox.viewmodel.SoundViewModel
 
 class SoundAdapter(private val sounds: List<Sound>) : RecyclerView.Adapter<SoundAdapter.SoundHolder>() {
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SoundHolder {
-
     val binding = ListItemSoundBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     return SoundHolder(binding)
   }
