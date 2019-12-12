@@ -1,6 +1,5 @@
 package com.bignerdranch.android.beatbox
 
-import SoundAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
